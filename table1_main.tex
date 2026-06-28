@@ -1,0 +1,27 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+entry=none,label=none,
+note{}={* p \num{< 0.1}, ** p \num{< 0.05}, *** p \num{< 0.01}},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-5}{solid, black, 0.05em},
+hline{4}={1-5}{solid, black, 0.05em},
+hline{1}={1-5}{solid, black, 0.08em},
+hline{11}={1-5}{solid, black, 0.08em},
+column{2-5}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& (1) Baseline & (2) State-level FE & (3) Drop 2020-21 & (4) Two-way cluster \\
+mobile\_z × cash\_intensive × post & \num{-0.003}*** & \num{-0.005}*** & \num{-0.002}** & \num{-0.003} \\
+& (\num{0.001}) & (\num{0.002}) & (\num{0.001}) & (\num{0.002}) \\
+Num.Obs. & \num{1167578} & \num{1167585} & \num{831727} & \num{1167578} \\
+R2 & \num{0.953} & \num{0.951} & \num{0.952} & \num{0.953} \\
+R2 Adj. & \num{0.942} & \num{0.941} & \num{0.935} & \num{0.942} \\
+FE: cnae\_secao\textasciicircum{}ano & X & X & X & X \\
+FE: id\_municipio\textasciicircum{}cnae\_secao & X & X & X & X \\
+FE: id\_municipio\textasciicircum{}ano & X &  & X & X \\
+FE: id\_estado\textasciicircum{}ano &  & X &  &  \\
+\end{talltblr}
+\end{table}
